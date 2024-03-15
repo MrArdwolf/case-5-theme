@@ -35,6 +35,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 ## Layouts
 # Components
 	- Navigation
+	- Header
 	- Footer
 	- Posts and pages
 	- Comments
@@ -53,7 +54,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Imports
 --------------------------------------------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
 
 /*--------------------------------------------------------------
 # Generic
@@ -407,8 +408,8 @@ input,
 select,
 optgroup,
 textarea {
-	color: #404040;
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	color: #FFF;
+	font-family: "Libre Bodoni";
 	font-size: 1rem;
 	line-height: 1.5;
 }
@@ -477,7 +478,7 @@ big {
 /* Elements
 --------------------------------------------- */
 body {
-	background: #fff;
+	background: #000;
 }
 
 hr {
@@ -652,19 +653,12 @@ textarea {
 
 /* Navigation
 --------------------------------------------- */
+
+
+
 .main-navigation {
-	position: fixed;
-	top: 0px;
 	display: block;
-	width: 100%;
-	height: 100px;
-	background: rgb(82,30,23);
-	background: linear-gradient(90deg, rgba(82,30,23,1) 0%, rgba(0,0,0,1) 100%);
-
-
-
-
-	border: 1px solid red;
+	height: 100%;
 }
 
 .main-navigation a {
@@ -732,10 +726,26 @@ textarea {
 		display: none;
 	}
 
-	.main-navigation {
+	.left-navigation, .right-navigation {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		flex-direction: row;
+		gap: 145px;
+	}
+
+	.left-navigation {
+		padding-right: 145px;
+	}
+
+	.right-navigation {
+		padding-left: 145px;
+	}
+
+	.main-navigation {
+		/* display: flex;
+		justify-content: center;
+		align-items: center; */
 	}
 
 	.main-navigation ul {
@@ -749,7 +759,6 @@ textarea {
 
 
 		
-	border: 1px solid green;
 	}
 }
 
@@ -782,20 +791,37 @@ textarea {
 
 /* Header
 --------------------------------------------- */
+.site-header {
+	position: fixed;
+	top: 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	width: 100%;
+	height: 100px;
+	background: linear-gradient(90deg, rgba(82,30,23,1) 0%, rgba(0,0,0,1) 100%);
+}
 
+
+.site-branding, .site-branding a {
+	width: 142px;
+	height: 100px;
+}
 
 /* Footer
 --------------------------------------------- */
 .site-footer {
+	position: relative;
+	bottom: -25px;
 	background-color: #491B14;
 	width: 100%;
-	height: 200px;
+	height: 260px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	text-align: center;
-	gap: 12px;
+	gap: 24px;
 }
 
 .footer-main {
@@ -805,7 +831,7 @@ textarea {
 
 .footer-section {
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: center;
 	flex-direction: column;
 	gap: 18px;
@@ -827,7 +853,7 @@ textarea {
 
 .footer-p {
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: center;
 	flex-direction: column;
 	gap: 0px;
@@ -866,6 +892,10 @@ textarea {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.site-main {
+	margin-top: 100px;
 }
 
 /* Comments

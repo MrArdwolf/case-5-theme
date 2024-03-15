@@ -31,8 +31,20 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 
+
+		<h1>h</h1>
+		<h1>h</h1>
+		<h1>h</h1>
+		<h1>h</h1>
+		<h1>h</h1>
+		<h1>h</h1>
+		<h1>h</h1>
+		<h1>h</h1>
+		<h1>h</h1>
+		<h1>h</h1>
+
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();
