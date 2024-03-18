@@ -17,6 +17,22 @@ get_header();
 
 	<main id="primary" class="site-main">
 
+	<?php
+if ( has_post_thumbnail() ) { // Check if the post has a featured image.
+    $thumbnail_url = get_the_post_thumbnail_url( null, 'full' ); // Get the URL of the featured image.
+    ?>
+    <div class="featured-image" style="background-image: url('<?php echo esc_url( $thumbnail_url ); ?>');">
+        <!-- Optional content -->
+    </div>
+        <div class="container container-featured">
+    <?php
+} else {
+?>
+<div class="container">
+<?php
+}
+?>
+
 		<?php
 		while ( have_posts() ) :
 			the_post();
@@ -32,6 +48,7 @@ get_header();
 		?>
 
 
+		<!-- <h1>h</h1>
 		<h1>h</h1>
 		<h1>h</h1>
 		<h1>h</h1>
@@ -40,8 +57,7 @@ get_header();
 		<h1>h</h1>
 		<h1>h</h1>
 		<h1>h</h1>
-		<h1>h</h1>
-		<h1>h</h1>
+		<h1>h</h1> -->
 
 	</main><!-- #main -->
 
