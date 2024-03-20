@@ -23,9 +23,17 @@ if ( has_post_thumbnail() ) { // Check if the post has a featured image.
     ?>
     <div class="featured-image" style="background-image: url('<?php echo esc_url( $thumbnail_url ); ?>');">
         <!-- Optional content -->
+		<?php
+if (is_front_page()) {
+    // This code will be executed if the current page is the front page
+	the_title( '<h1 class="entry-title">', '</h1>' );
+}
+?>
     </div>
         <div class="container container-featured">
-    <?php
+    
+
+	<?php
 } else {
 ?>
 <div class="container">
