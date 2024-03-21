@@ -84,7 +84,7 @@ html {
 /**
  * Remove the margin in all browsers.
  */
-body {
+* {
 	margin: 0;
 }
 
@@ -423,6 +423,12 @@ textarea {
 	font-family: "Josefin Slab";
 	font-size: 2rem;
 	font-weight: 700;
+}
+
+.about-text {
+	font-family: "Josefin Sans";
+	font-size: 1.25rem;
+	font-weight: 400;
 }
 
 h1,
@@ -895,8 +901,8 @@ textarea {
 	clear: both;
 }
 
-.fp-motto {
-	font-size: 96px;
+.entry-footer {
+	display: none;
 }
 
 .featured-image {
@@ -959,31 +965,6 @@ textarea {
 	margin-top: 100px;
 }
 
-.about-section-1 {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-}
-
-.img-w-text {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	width: 100%;
-	gap: 25px;
-}
-
-.img-w-text .wp-block-media-text__content {
-	padding: 0;
-}
-
-.img-w-text figure {
-}
-
-.comments-area {
-	width: 40%;
-}
-
 .container {
 	display: flex;
 	max-width: 1320px;
@@ -1000,25 +981,55 @@ textarea {
 .menu-content-left > :first-child {
 	display: flex;
 	flex-direction: column;
-	width: 315px;
+	max-width: 315px;
 }
 
 .menu-content-center > :first-child {
 	display: flex;
 	flex-direction: column;
-	width: 515px;
+	max-width: 515px;
 }
 
 .menu-content-right > :first-child {
 	display: flex;
 	flex-direction: column;
-	width: 315px;
+	max-width: 315px;
 }
 
 .menu-content img {
 	width: 100%;
 	height: 318px;
 }
+
+.about-section-1 {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.img-w-text {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+	gap: 25px;
+}
+
+.img-w-text .wp-block-media-text__content {
+	padding: 0;
+	max-width: 520px;
+}
+
+.img-w-text img {
+	max-width: 211px;
+	max-height: 211px;
+}
+
+.comments-area {
+	width: 40%;
+}
+
+
 
 /* Comments
 --------------------------------------------- */
