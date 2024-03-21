@@ -177,3 +177,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// add_filter('the_content', 'unwrap_inner_container_div');
+
+// function unwrap_inner_container_div($content) {
+//     return preg_replace('/<div class="wp-block-group__inner-container">(.*?)<\/div>/s', '$1', $content);
+// }

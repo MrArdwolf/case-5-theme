@@ -55,6 +55,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Imports
 --------------------------------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
 
 /*--------------------------------------------------------------
 # Generic
@@ -100,7 +101,6 @@ main {
  */
 h1 {
 	font-size: 2em;
-	margin: 0.67em 0;
 }
 
 /* Grouping content
@@ -409,9 +409,20 @@ select,
 optgroup,
 textarea {
 	color: #FFF;
-	font-family: "Libre Bodoni";
-	font-size: 1rem;
+	font-family: "Josefin Slab";
+	font-size: 2rem;
 	line-height: 1.5;
+}
+
+.menu-items {
+	font-family: "Josefin Sans";
+	font-size: 1.5rem;
+}
+
+.menu-sub-title {
+	font-family: "Josefin Slab";
+	font-size: 2rem;
+	font-weight: 700;
 }
 
 h1,
@@ -424,7 +435,6 @@ h6 {
 }
 
 p {
-	margin-bottom: 1.5em;
 }
 
 dfn,
@@ -435,18 +445,15 @@ i {
 }
 
 blockquote {
-	margin: 0 1.5em;
 }
 
 address {
-	margin: 0 0 1.5em;
 }
 
 pre {
 	background: #eee;
 	font-family: "Courier 10 Pitch", courier, monospace;
 	line-height: 1.6;
-	margin-bottom: 1.6em;
 	max-width: 100%;
 	overflow: auto;
 	padding: 1.6em;
@@ -478,19 +485,17 @@ big {
 /* Elements
 --------------------------------------------- */
 body {
-	background: #000;
+	background: #15191C;
 }
 
 hr {
 	background-color: #ccc;
 	border: 0;
 	height: 1px;
-	margin-bottom: 1.5em;
 }
 
 ul,
 ol {
-	margin: 0 0 1.5em 3em;
 }
 
 ul {
@@ -504,7 +509,6 @@ ol {
 li > ul,
 li > ol {
 	margin-bottom: 0;
-	margin-left: 1.5em;
 }
 
 dt {
@@ -512,7 +516,6 @@ dt {
 }
 
 dd {
-	margin: 0 1.5em 1.5em;
 }
 
 /* Make sure embeds and iframes fit their containers. */
@@ -528,11 +531,9 @@ img {
 }
 
 figure {
-	margin: 1em 0;
 }
 
 table {
-	margin: 0 0 1.5em;
 	width: 100%;
 }
 
@@ -767,7 +768,6 @@ textarea {
 .posts-navigation,
 .site-main
 .post-navigation {
-	margin: 0 0 1.5em;
 }
 
 .comment-navigation .nav-links,
@@ -817,7 +817,7 @@ textarea {
 --------------------------------------------- */
 .site-footer {
 	position: relative;
-	bottom: -24px;
+	/* bottom: -24px; */
 	background-color: #491B14;
 	width: 100%;
 	height: 260px;
@@ -831,12 +831,13 @@ textarea {
 .footer-main {
 	display: flex;
 	gap: 128px;
+	margin-top: 16px;
 }
 
 .footer-section {
 	display: flex;
 	align-items: flex-start;
-	justify-content: center;
+	justify-content: flex-start;
 	flex-direction: column;
 	gap: 18px;
 }
@@ -850,17 +851,17 @@ textarea {
 	font-size: 32px;
 }
 
-.footer-p p {
-	margin: 0;
-	font-size: 15px;
-}
-
 .footer-p {
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
 	flex-direction: column;
 	gap: 0px;
+}
+
+.footer-p p {
+	margin: 0;
+	font-size: 15px;
 }
 
 .footer-logos {
@@ -870,6 +871,14 @@ textarea {
 
 .site-footer .site-info {
 	color: #FFF;
+	font-size: 1rem;
+	background-color: #3D140E;
+	width: 100%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 70px;
 }
 
 /* Posts and pages
@@ -878,18 +887,12 @@ textarea {
 	display: block;
 }
 
-.post,
-.page {
-	margin: 0 0 1.5em;
-}
-
 .updated:not(.published) {
 	display: none;
 }
 
 .page-links {
 	clear: both;
-	margin: 0 0 1.5em;
 }
 
 .fp-motto {
@@ -911,10 +914,26 @@ textarea {
 	justify-content: center;
 }
 
-.featured-image .entry-title {
+.front-page-image {
+
+	height: 100dvh;
+	width: 100%;
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.front-page-image .entry-title {
 	font-size: 96px;
 	width: 50%;
 	text-align: center;
+}
+
+.container-front-page {
+	display: none;
 }
 
 .post-thumbnail img {
@@ -972,8 +991,33 @@ textarea {
 	gap: 50px;
 }
 
-.container article {
-	width: 50%;
+.menu-content > :first-child {
+	display: flex;
+	width: 100%;
+	gap: 52px;
+}
+
+.menu-content-left > :first-child {
+	display: flex;
+	flex-direction: column;
+	width: 315px;
+}
+
+.menu-content-center > :first-child {
+	display: flex;
+	flex-direction: column;
+	width: 515px;
+}
+
+.menu-content-right > :first-child {
+	display: flex;
+	flex-direction: column;
+	width: 315px;
+}
+
+.menu-content img {
+	width: 100%;
+	height: 318px;
 }
 
 /* Comments
