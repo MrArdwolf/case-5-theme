@@ -890,17 +890,6 @@ textarea {
 
 /* Posts and pages
 --------------------------------------------- */
-.sticky {
-	display: block;
-}
-
-.updated:not(.published) {
-	display: none;
-}
-
-.page-links {
-	clear: both;
-}
 
 .entry-footer {
 	display: none;
@@ -968,6 +957,10 @@ textarea {
 	gap: 50px;
 }
 
+article, .entry-content {
+	width: 100%;
+}
+
 /* MENU */
 .menu-text {
 	margin-top: 72px;
@@ -1012,8 +1005,7 @@ textarea {
 }
 /* end MENU */
 
-/* about */
-
+/* ABOUT */
 .welcome-container> :first-child {
 	display: flex;
 	flex-direction: column;
@@ -1028,18 +1020,17 @@ textarea {
 	gap: 20px;
 }
 
-.colombia-container> :first-child {
+.info-container-divided> :first-child {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
 	max-width: 620px;
 }
 
-.joybullen-container> :first-child {
+.info-container-text> :first-child {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
-	max-width: 620px;
+	gap: 12px;
 }
 
 .info-container img {
@@ -1047,8 +1038,63 @@ textarea {
 	height: 318px;
 }
 
+.comment-respond {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px;
+}
 
-/* end about */
+.comment-respond h3 {
+	font-family: "Josefin Slab";
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.comment-respond p, .comment-respond input {
+	font-family: "Josefin Sans";
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 1;
+}
+
+.comment-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* end ABOUT */
+
+/* 	CONTACT */
+
+.contact-container> :first-child {
+	display: flex;
+	flex-direction: column;
+	gap: 27px;
+	max-width: 620px;
+}
+
+.contact-text {
+	max-width: 530px;
+}
+
+.find-container> :first-child {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	max-width: 620px;
+}
+
+.contact-page> :first-child {
+	display: flex;
+	max-width: 1320px;
+	gap: 20px;
+	margin-top: 45px;
+}
+
+
+/* end CONTACT */
 
 
 
