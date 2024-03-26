@@ -724,9 +724,50 @@ textarea {
 
 /* Small menu. */
 .menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
+.mobile-navigation.toggled ul {
+	display: flex;
 }
+
+.menu-toggle {
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	z-index: 1;
+}
+
+.nav-menu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.mobile-navigation.toggled {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #15191C;
+	width: 100vw;
+	height: 100vh;
+}
+
+.left-navigation,
+.right-navigation {
+	display: none;
+}
+
+
+
+
+
+
 
 @media screen and (min-width: 37.5em) {
 
@@ -762,12 +803,10 @@ textarea {
 		justify-content: center;
 		align-items: center;
 		gap: 145px;
+	}
 
-
-		/* 432px */
-
-
-
+	.mobile-navigation {
+		display: none;
 	}
 }
 
@@ -817,6 +856,14 @@ textarea {
 
 .entry-header {
 	display: none;
+}
+
+@media screen and (max-width: 37.5em) {
+	.site-header {
+		justify-content: space-between;
+
+	}
+
 }
 
 /* Footer
@@ -886,6 +933,13 @@ textarea {
 	height: 70px;
 	position: absolute;
 	bottom: 0;
+}
+
+
+@media screen and (max-width: 37.5em) {
+	.site-footer {
+		display: none;
+	}
 }
 
 /* Posts and pages
@@ -1096,6 +1150,37 @@ article, .entry-content {
 
 /* end CONTACT */
 
+
+/* Mobile view
+--------------------------------------------- */
+
+@media screen and (max-width: 37.5em) {
+
+	.featured-image {
+		height: 30dvh;
+	}
+
+	.contact-page> :first-child {
+		flex-direction: column;
+		text-align: center;
+		max-width: 400px;
+		margin: 45px 15px 0 15px;
+		gap: 40px;
+	}
+
+	.contact-container> :first-child {
+		gap: 20px;
+	}
+
+	.find-container> :first-child {
+		gap: 20px;
+		max-width: 400px;
+		margin: 0 15px;
+	}
+	
+
+
+}
 
 
 /* Comments

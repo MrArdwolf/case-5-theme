@@ -51,6 +51,7 @@ function case_5_theme_setup() {
 		array(
 			'menu-1' => esc_html__( 'Left', 'case-5-theme' ),
 			'menu-2' => esc_html__( 'Right', 'case-5-theme' ),
+			'menu-3' => esc_html__( 'mobile', 'case-5-theme' ),
 		)
 	);
 

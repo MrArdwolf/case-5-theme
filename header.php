@@ -27,8 +27,7 @@
 
 	<header id="masthead" class="site-header">
 
-		<nav id="site-navigation" class="left-navigation main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'case-5-theme' ); ?></button>
+		<nav id="left-navigation" class="left-navigation main-navigation">
 			<?php
 			wp_nav_menu(
 				array(
@@ -43,13 +42,24 @@
 			<?php the_custom_logo(); ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="right-navigation main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'case-5-theme' ); ?></button>
+		<nav id="right-navigation" class="right-navigation main-navigation">
 			<?php
 			wp_nav_menu(
 				array(
 					'theme_location' => 'menu-2',
 					'menu_id'        => 'right-menu',
+				)
+			);
+			?>
+		</nav><!-- #site-navigation -->
+
+		<nav id="mobile-navigation" class="mobile-navigation main-navigation">
+			<ion-icon name="menu" class="menu-toggle" aria-controls="mobile-menu" aria-expanded="false"></ion-icon>
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-3',
+					'menu_id'        => 'mobile-menu',
 				)
 			);
 			?>
