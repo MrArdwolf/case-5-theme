@@ -734,7 +734,7 @@ textarea {
 	position: absolute;
 	right: 10px;
 	top: 10px;
-	z-index: 1;
+	z-index: 2;
 }
 
 .nav-menu {
@@ -747,6 +747,7 @@ textarea {
 	align-items: center;
 	justify-content: center;
 	gap: 20px;
+	z-index: 1;
 }
 
 .mobile-navigation.toggled {
@@ -756,6 +757,7 @@ textarea {
 	background-color: #15191C;
 	width: 100vw;
 	height: 100vh;
+	z-index: 1;
 }
 
 .left-navigation,
@@ -938,8 +940,31 @@ textarea {
 
 @media screen and (max-width: 37.5em) {
 	.site-footer {
-		display: none;
+		max-width: 100vw;
+		height: 200px;
 	}
+
+	.footer-main {
+		max-width: 100vw;
+		gap: 20px;
+	}
+
+	.footer-logos {
+		font-size: 20px;
+	}
+
+	.footer-h2 h2 {
+		font-size: 16px;
+	}
+
+	.footer-p p {
+		font-size: 12px;
+		line-height: 1.3;
+	}
+}
+
+.hidden {
+	display: none;
 }
 
 /* Posts and pages
@@ -1176,6 +1201,10 @@ article, .entry-content {
 		gap: 20px;
 		max-width: 400px;
 		margin: 0 15px;
+	}
+
+	.container {
+		margin-bottom: 25px;
 	}
 	
 
