@@ -1117,6 +1117,14 @@ article, .entry-content {
 	height: 318px;
 }
 
+.joybullen-above {
+	display: inline;
+}
+
+.joybullen-below {
+	display: none;
+}
+
 .comment-respond {
 	display: flex;
 	flex-direction: column;
@@ -1181,14 +1189,29 @@ article, .entry-content {
 
 @media screen and (max-width: 37.5em) {
 
+	.text-regular {
+		font-size: 16px;
+		line-height: 1.3;
+	}
+	
+	.text-large {
+		font-size: 24px;
+		line-height: 1.3;
+	}
+
 	.featured-image {
 		height: 30dvh;
+	}
+
+	.front-page-image .entry-title {
+		font-size: 48px;
+		width: 70%;
 	}
 
 	.contact-page> :first-child {
 		flex-direction: column;
 		text-align: center;
-		max-width: 400px;
+		max-width: 315px;
 		margin: 45px 15px 0 15px;
 		gap: 40px;
 	}
@@ -1199,14 +1222,45 @@ article, .entry-content {
 
 	.find-container> :first-child {
 		gap: 20px;
-		max-width: 400px;
+		max-width: 315px;
 		margin: 0 15px;
 	}
 
 	.container {
 		margin-bottom: 25px;
 	}
+
+	.welcome-container {
+		max-width: 315px;
+	}
+
+	.info-container> :first-child {
+		flex-direction: column;
+		max-width: 315px;
+	}
 	
+	.comment-respond {
+		max-width: 315px;
+	}
+
+	.joybullen-below {
+		display: inline;
+	}
+
+	.joybullen-above {
+		display: none;
+	}
+
+	 /* Meny */
+
+	.menu-content> :first-child {
+		flex-direction: column;
+		max-width: 315px !important;
+	}
+	.menu-text {
+		max-width: 315px;
+	}
+	  /* Meny end */
 
 
 }
